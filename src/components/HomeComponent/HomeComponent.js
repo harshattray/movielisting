@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2020-08-25T11:56:53+02:00
  * @Last modified by:   harsha
- * @Last modified time: 2020-08-25T15:41:27+02:00
+ * @Last modified time: 2020-08-25T16:57:21+02:00
  */
 
 import React, {Component} from 'react';
@@ -102,7 +102,8 @@ class HomeComponent extends Component {
                   ? {color: '#fedc33'}
                   : {color: '#5e6169'},
                 {fontSize: 18, fontWeight: '500'},
-              ]}>
+              ]}
+              data-test="trending">
               Trending
             </Text>
           </View>
