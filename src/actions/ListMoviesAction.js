@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2020-08-25T12:18:45+02:00
  * @Last modified by:   harsha
- * @Last modified time: 2020-08-25T14:57:31+02:00
+ * @Last modified time: 2020-08-25T16:19:44+02:00
  */
 
 import axios from 'axios';
@@ -48,7 +48,6 @@ export const ListAllMovies = (api) => {
         })
         .then(function (response) {
           dispatch({type: 'GET_LIST_DATA', payload: {data: response.data}});
-          console.log(response.data);
         })
         .catch(function (error) {
           dispatch({type: 'GETTING_LIST_FAILED'});

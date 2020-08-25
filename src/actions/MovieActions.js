@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2020-08-25T12:18:45+02:00
  * @Last modified by:   harsha
- * @Last modified time: 2020-08-25T14:56:52+02:00
+ * @Last modified time: 2020-08-25T16:28:10+02:00
  */
 
 import axios from 'axios';
@@ -16,7 +16,7 @@ const MovieDetails = (id) => {
   });
 };
 
-const SimilarMovies = (id) => {
+export const SimilarMovies = (id) => {
   return axios.get('https://api.themoviedb.org/3/movie/' + id + '/similar', {
     params: {
       api_key: apiKey,
@@ -32,8 +32,6 @@ export const GetMovieData = (id) => {
         axios.spread(
           //spoken_languages
           function (MovieDetails, SimilarMovies) {
-            console.log(MovieDetails.data.genres);
-            console.log(SimilarMovies.data);
             dispatch({
               type: 'GET_MOVIE_DATA',
               payload: {
