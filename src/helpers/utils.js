@@ -2,7 +2,7 @@
  * @Author: harsha
  * @Date:   2020-08-25T16:17:01+02:00
  * @Last modified by:   harsha
- * @Last modified time: 2020-08-25T16:17:13+02:00
+ * @Last modified time: 2020-08-25T17:23:10+02:00
  */
 import {applyMiddleware, createStore} from 'redux';
 import rootReducer from '../reducers/index';
