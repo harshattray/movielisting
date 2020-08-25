@@ -1,0 +1,41 @@
+# @Author: harsha
+# @Date:   2020-08-25T09:57:07+02:00
+# @Last modified by:   harsha
+# @Last modified time: 2020-08-25T14:46:05+02:00
+
+
+
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+
+target 'movielisting' do
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+
+
+  target 'movielistingTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  use_flipper!
+  post_install do |installer|
+    flipper_post_install(installer)
+  end
+end
+
+target 'movielisting-tvOS' do
+  # Pods for movielisting-tvOS
+
+  target 'movielisting-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
